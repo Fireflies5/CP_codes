@@ -1,0 +1,38 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int n,m;
+    int i,j;
+    cin>>n>>m;
+    int **arr= new int*[n];
+    for(i=0;i<n;i++){
+        int k;
+        cin>>k;
+        arr[i]=new int[k];
+        for(j=0;j<k;j++){
+            cin>>arr[i][j];
+        }
+    }
+    for(i=0;i<m;i++){
+        int p,q;
+        cin>>p>>q;
+        //cout<<p<<"\n";
+        //cout<<"   "<<p<<q<<endl;
+        cout<<arr[p][q]<<"\n";
+    }
+    // for(i=0;i<n;i++){
+    //     for(j=1;j<arr[i][0]+1;j++){
+    //         cout<<arr[i][j];
+    //     }
+    //     cout<<endl;
+    // } 
+    return 0;
+}
